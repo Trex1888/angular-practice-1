@@ -1,0 +1,33 @@
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Website</th>
+      <th>Address</th>
+      <th>Company</th>
+      <th>Geo</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let person of loadPeople">
+      <td>{{ person.id }}</td>
+      <td>{{ person.name }}</td>
+      <td>{{ person.username }}</td>
+      <td>{{ person.email }}</td>
+      <td>{{ person.website }}</td>
+      <td>{{ person.address.city }}</td>
+      <td>{{ person.address.street }}</td>
+      <td>{{ person.address.suite }}</td>
+      <td>{{ person.address.zipcode }}</td>
+      <td>{{ person.company.bs }}</td>
+      <td>{{ person.company.catchPhrase }}</td>
+      <td>{{ person.company.name }}</td>
+      <td>{{ person.address.geo.lat }}</td>
+      <td>{{ person.address.geo.lng }}</td>
+    </tr>
+  </tbody>
+</table>
